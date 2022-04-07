@@ -1,2 +1,4 @@
 20220128	22:41:11	50ccdf76-0210-4916-a797-8483ae4ecdfb	Error: Not allowed by CORS
 20220128	23:02:34	40a5669e-10b7-4f43-8c16-df1020ca7fd7	Error: Not allowed by CORS
+20220407	16:27:41	7a2382d8-a45c-452a-b239-b45479d22061	Error: ENOENT: no such file or directory, stat 'C:\Users\asdfghj\Desktop\accesos\node-session\views\test.html'
+20220407	16:27:42	86d53cc5-b96f-48f4-80e9-56ec3a260aaa	Error: ENOENT: no such file or directory, stat 'C:\Users\asdfghj\Desktop\accesos\node-session\views\test.html'
