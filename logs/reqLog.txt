@@ -405,3 +405,12 @@
 20220407	21:41:54	5ae920c3-37f2-426e-8a21-7b6a9b0f17ab	GET	undefined	/new-page
 20220407	21:41:54	a3318a74-fa6d-44cf-86a9-b0372bd7066a	GET	undefined	/css/style.css
 20220407	21:41:54	2dd1e05d-bcbc-4638-a0f0-9c4fdb2a8c06	GET	undefined	/img/img1.jpg
+20220407	22:09:41	8e9456bb-6b59-4274-9d2b-b3b533f8981c	GET	undefined	/employee/
+20220407	22:09:50	34ec104f-7653-4c70-8354-04b79f73bc58	GET	undefined	/employee/
+20220407	22:10:05	12809d0c-8cd0-4aeb-9d99-bbb282ae987c	GET	undefined	/employee/
+20220407	22:10:10	eac9e053-ff7e-481f-b311-de11405beeca	GET	undefined	/employee/2
+20220407	22:10:17	1d0e5a36-ec5f-452f-9a50-2d202e769561	GET	undefined	/employee/8789
+20220407	22:16:33	c3be8bf1-13f1-4d0c-85a9-692a9c641a3e	GET	undefined	/employee/22
+20220408	12:48:42	4284f24c-71d6-4e24-9428-a5b8b3914245	GET	undefined	/
+20220408	12:48:42	f5c59e0c-2552-42a8-a56a-ceb23b33dcd9	GET	undefined	/css/style.css
+20220408	12:49:26	c1c08ea7-9334-46fc-a262-c5a43901f0c3	GET	undefined	/employee/
