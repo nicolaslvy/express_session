@@ -5,32 +5,25 @@
 // express, path , router
 
 const express = require('express')
-const path = require('path')
 const router = express.Router()
-const data = {}
-const empcontroller = require('../../controllers/empcontroller') 
+const empcontroller = require('../../controllers/empcontroller')
 router.route('/').get(empcontroller.getAllEmployees)
 
 
-// ).post(
-//     (req,res)=>{
-    
-//     }
-// )
-// .put(
-//     (req,res)=>{
-    
-//     }
-// ).delete(
-//     (req,res)=>{
-    
-//     }
-// )
-// router.route('/:id').get(
-// (req,res)=>{
-//     res.json({'id': req.params.id})
-// }
-// )
+router.route('/').get(
+    empcontroller.getAllEmployees
+    ).post(
+    empcontroller.createNewEmployee
+
+)
+    .put(
+        empcontroller.updateEmployee
+    ).delete(
+        empcontroller.deleteEmployee
+    )
+router.route('/:id').get(
+    empcontroller.getEmployee
+)
 
 
 
