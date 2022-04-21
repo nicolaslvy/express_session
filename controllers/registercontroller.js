@@ -17,7 +17,7 @@ const register = async (req, res)=>{
    if(usuario) return res.sendStatus(400);
    try{
       
-    const hashedpwd = bcrypt.hash(pwd, 10 )
+    const hashedpwd = await bcrypt.hash(pwd, 10 )
     const newUser = {"username": user, "password": hashedpwd}
     data.setUsers([...data.users, newUser])
     await fsPromises.writeFile(path.join(__dirname, "..", "model", "user.json"), JSON.stringify(data.users));
