@@ -700,3 +700,4 @@
 20220420	22:32:28	6502dfed-d170-4277-9743-e28841893a75	GET	undefined	/register/
 20220420	22:32:29	6a52cc31-3366-4ba8-83b5-0a5cd0d9087c	GET	undefined	/register/
 20220420	22:32:29	466c8159-8a11-4c9c-9f5c-ec7a44e0c15e	GET	undefined	/register/
+20220420	22:47:54	d0acb7f2-00c4-43c5-a79c-ccaec29a0893	GET	undefined	/auth

@@ -41,7 +41,8 @@ app.use('/subdir', require('./routes/subdir'));
 app.use('/employee', require('./routes/api/employes'));
 //register route
 app.use('/register', require('./routes/register'))
-
+//auth route
+app.use('/auth', require('./routes/auth'));
 
 app.all('*', (req, res) => {
     res.status(404);
