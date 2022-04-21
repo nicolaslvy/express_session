@@ -1,0 +1,36 @@
+const path = require('path')
+const fsPromises = require('fs').promises
+const bcrypt = require('bcrypt')
+
+const data = {
+    users: require('../model/user.json'),
+    setUsers: function(data)  {this.users = data}
+
+}
+
+const register = async (req, res)=>{
+   const {user, pwd} = req.body
+   if(!user || !pwd){
+    return res.status(400).json({ 'message': 'Username and password are required.' });
+   }
+   let usuario = data.users.find(usuario => usuario.username === user)
+   if(usuario) return res.sendStatus(400);
+   try{
+      
+    const hashedpwd = bcrypt.hash(pwd, 10 )
+    const newUser = {"username": user, "password": hashedpwd}
+    data.setUsers([...data.users, newUser])
+    await fsPromises.writeFile(path.join(__dirname, "..", "model", "user.json"), JSON.stringify(data.users));
+    
+    res.status(201).json({'message': `user ${newUser.username} created`})
+   }catch(err){
+       res.status(501).json({'message': err.message})
+   }
+
+
+   
+}   
+
+
+module.exports = {register};
+

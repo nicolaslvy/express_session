@@ -39,6 +39,8 @@ app.use('/subdir', express.static(path.join(__dirname, '/public')));
 app.use('/', require('./routes/root'))
 app.use('/subdir', require('./routes/subdir'));
 app.use('/employee', require('./routes/api/employes'));
+//register route
+app.use('/register', require('./routes/register'))
 
 
 app.all('*', (req, res) => {

@@ -2,3 +2,7 @@
 20220128	23:02:34	40a5669e-10b7-4f43-8c16-df1020ca7fd7	Error: Not allowed by CORS
 20220407	16:27:41	7a2382d8-a45c-452a-b239-b45479d22061	Error: ENOENT: no such file or directory, stat 'C:\Users\asdfghj\Desktop\accesos\node-session\views\test.html'
 20220407	16:27:42	86d53cc5-b96f-48f4-80e9-56ec3a260aaa	Error: ENOENT: no such file or directory, stat 'C:\Users\asdfghj\Desktop\accesos\node-session\views\test.html'
+20220420	20:07:50	5be12127-1611-46db-b410-47520c1ec81d	ReferenceError: consoler is not defined
+20220420	20:07:56	aaa5ba81-19fe-445c-8e03-d3d381afeb54	ReferenceError: consoler is not defined
+20220420	20:42:45	7e59de35-92a2-4e13-8e1a-be144d6bd537	SyntaxError: Unexpected token  in JSON at position 23
+20220420	22:14:20	4fad5187-6896-490a-ad5e-11376f9c7aff	SyntaxError: Unexpected token x in JSON at position 24
