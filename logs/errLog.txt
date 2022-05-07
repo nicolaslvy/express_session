@@ -7,3 +7,18 @@
 20220420	20:42:45	7e59de35-92a2-4e13-8e1a-be144d6bd537	SyntaxError: Unexpected token  in JSON at position 23
 20220420	22:14:20	4fad5187-6896-490a-ad5e-11376f9c7aff	SyntaxError: Unexpected token x in JSON at position 24
 20220420	23:14:14	ae37e4a6-fcdb-4786-96c9-401d36fe4ee9	SyntaxError: Unexpected token } in JSON at position 42
+20220506	23:11:37	3a404f25-adf2-4b47-b57f-23bee2232654	TypeError: Cannot read property 'authorization' of undefined
+20220506	23:11:40	1349da45-311c-4413-a2dd-1996688086d2	TypeError: Cannot read property 'authorization' of undefined
+20220506	23:11:41	7d3751a5-5254-428b-87ee-a932809c010f	TypeError: Cannot read property 'authorization' of undefined
+20220506	23:11:41	7edc8cd0-578b-4981-9741-11d23a8fe597	TypeError: Cannot read property 'authorization' of undefined
+20220506	23:11:41	156a92e3-3ac1-4d50-a813-2ddda63dea09	TypeError: Cannot read property 'authorization' of undefined
+20220506	23:11:42	e751f88e-9fb4-445c-be59-e45f69d779cf	TypeError: Cannot read property 'authorization' of undefined
+20220506	23:11:42	9db19879-996a-482b-9c98-668c77a2123f	TypeError: Cannot read property 'authorization' of undefined
+20220506	23:11:42	8abc95c7-2976-4a79-9afb-78fa702254a7	TypeError: Cannot read property 'authorization' of undefined
+20220506	23:11:42	48c1cc39-5c67-430b-8260-1fbac6b1df95	TypeError: Cannot read property 'authorization' of undefined
+20220506	23:11:42	cd9421d5-fa91-4651-bbd5-4218b59aa645	TypeError: Cannot read property 'authorization' of undefined
+20220506	23:11:46	af8a51c0-958f-4d41-9c77-800b1bedd6d0	TypeError: Cannot read property 'authorization' of undefined
+20220506	23:15:07	3022c727-3d98-4f68-a33d-3b68b12bad71	TypeError: Cannot read property 'authorization' of undefined
+20220506	23:15:20	a4d7fd1d-8617-4ead-b1c9-e41812c343ff	TypeError: Cannot read property 'authorization' of undefined
+20220506	23:16:03	548082da-0f7b-4b81-a5a8-545df2d0d28f	TypeError: Cannot read property 'authorization' of undefined
+20220506	23:17:05	f15d8f01-4500-4225-9572-e5e2701302a6	TypeError: Cannot read property 'authorization' of undefined

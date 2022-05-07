@@ -8,6 +8,13 @@ const data = {
 
 }
 
+//prueba
+require('dotenv').config()
+
+console.log(process.env.ACCES_TOKEN_SECRET)
+//final prueba
+
+
 const register = async (req, res)=>{
    const {user, pwd} = req.body
    if(!user || !pwd){

@@ -5,9 +5,12 @@
 // express, path , router
 
 const express = require('express')
+const req = require('express/lib/request')
 const router = express.Router()
 const empcontroller = require('../../controllers/empcontroller')
-router.route('/').get(empcontroller.getAllEmployees)
+const veryfyJWT = require('../../middleware/veryfyJwt')
+
+router.route('/').get(veryfyJWT, empcontroller.getAllEmployees)
 
 
 router.route('/').get(

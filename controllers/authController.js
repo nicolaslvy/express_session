@@ -21,14 +21,14 @@ const verification = async (req, res) => {
         // creando el jsonwebtoken,firmando accestoken &&refreshtoken 
         const accessToken = JWT.sign(
             { "username": foundUser.username },
-            process.env.ACCESS_TOKEN_SECRET,
-            { expiresIn: "300s" }
+            `${process.env.ACCESS_TOKEN_SECRET}`,
+            { expiresIn: "60s" }
         )
 
 
         const refreshToken = JWT.sign(
             { "username": foundUser.username },
-            process.env.ACCESS_TOKEN_SECRET,
+             `${process.env.REFRESH_TOKEN_SECRET}`,
             { expiresIn: '1d' })
 
 
@@ -45,7 +45,7 @@ const verification = async (req, res) => {
         //enviando token 
         res.cookie('JWT',refreshToken, {httpOnly:true,sameSite: 'none', secure: true, maxAge: 24 * 60 * 60 * 1000})
         res.json({accessToken})    
-        res.json({ 'message': 'succesfully logged in' })
+        // res.json({ 'message': 'succesfully logged in' })
     } else {
         res.sendStatus(401)
     }
