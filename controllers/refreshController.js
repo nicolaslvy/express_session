@@ -15,12 +15,12 @@ const handleRefresh = (req, res) => {
     const foundUser = data.users.find(person => person.refreshToken === refreshTokenUser )
     if (!foundUser) return res.sendStatus(403); //Forbidden 
     //evaluate JWT
-    JWT.sign(
+    JWT.verify(
         refreshTokenUser,
         process.env.REFRESH_TOKEN_SECRET,
         (err,decoded)=>{
-            //falta validar token que nosea de diferente usauario   || foundUser !== decoded.username
-            if(err) return res.sendStatus(403); //forbidden 
+            //falta validar token que nosea de diferente usauario   
+            if(err || foundUser.username !== decoded.username) return res.sendStatus(403); //forbidden 
             const accessToken = JWT.sign(
                 {"username": decoded.username},
                 process.env.ACCES_TOKEN_SECRET,
