@@ -7,7 +7,7 @@ require('dotenv').config()
 
 const data = {
     users: require('../model/user.json'),
-    setEmployees: function (data) { this.user = data }
+    setEmployees: function (data) { this.users = data }
 }
 
 const verification = async (req, res) => {
@@ -28,23 +28,27 @@ const verification = async (req, res) => {
 
         const refreshToken = JWT.sign(
             { "username": foundUser.username },
-             `${process.env.REFRESH_TOKEN_SECRET}`,
+            `${process.env.REFRESH_TOKEN_SECRET}`,
             { expiresIn: '1d' })
 
 
         //guardando el Token en usuario actual
-
         const otherUsers = data.users.filter(person => person.username !== foundUser.username)
-        const currentUser = {...foundUser, refreshToken}
-
+        const currentUser = { ...foundUser, refreshToken }
         data.setEmployees([...otherUsers, currentUser]);
 
         //escribiendo el json que simula la base de datos
-        let locationJson = path.join(__dirname, "..", "model", "user.json")
-        await fsPromises.writeFile(locationJson, JSON.stringify(data.users))
+        await fsPromises.writeFile(path.join(__dirname, "..", "model", "user.json"), JSON.stringify(data.users));
+
+        // res.status(201).json({ 'message': `reiniciando sesion` })
+
+
+        // await fsPromises.writeFile(path.join(__dirname, '..', 'model', 'user.json'), JSON.stringify(data.users))
+
+
         //enviando token 
-        res.cookie('JWT',refreshToken, {httpOnly:true,sameSite: 'none', secure: true, maxAge: 24 * 60 * 60 * 1000})
-        res.json({accessToken})    
+        res.cookie('jwt', refreshToken, { httpOnly: true, sameSite: 'none', maxAge: 24 * 60 * 60 * 1000 })
+        res.json({ accessToken })
         // res.json({ 'message': 'succesfully logged in' })
     } else {
         res.sendStatus(401)
