@@ -51,7 +51,8 @@ app.use('/register', require('./routes/register'))
 app.use('/auth', require('./routes/auth'));
 //auth 
 app.use('/refresh', require('./routes/refresh'));
-
+//logout
+app.use('/logout',require('./routes/logout'))
 
 
 app.all('*', (req, res) => {

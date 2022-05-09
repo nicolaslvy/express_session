@@ -54,7 +54,7 @@ const verification = async (req, res) => {
         res.sendStatus(401)
     }
 
-    res.sendStatus(200);
+  
 
 
 }

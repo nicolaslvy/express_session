@@ -5,7 +5,6 @@
 // express, path , router
 
 const express = require('express')
-const req = require('express/lib/request')
 const router = express.Router()
 const empcontroller = require('../../controllers/empcontroller')
 const veryfyJWT = require('../../middleware/veryfyJwt')
