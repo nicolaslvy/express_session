@@ -1,1 +1,23 @@
-[{"username":"pedro","password":"$2b$10$seVTYLg69xud.zlrjaOz3.7JXCKgwxwmoVT35jNNMsEB3KeF.pWO2"},{"username":"juan","password":"$2b$10$NgwF.4mw72UJbk7/VAdz/urPDZqqZKTm91izJn8XeNZ1rRBHtVWfS","refreshToken":""}]
+[
+    {
+        "username": "pedro",
+        "password": "$2b$10$seVTYLg69xud.zlrjaOz3.7JXCKgwxwmoVT35jNNMsEB3KeF.pWO2",
+        "roles": {
+            "User": 2001,
+            "Editor": 1984,
+            "Admin": 5150
+        }
+    },
+    {
+        "username": "juan",
+        "password": "$2b$10$NgwF.4mw72UJbk7/VAdz/urPDZqqZKTm91izJn8XeNZ1rRBHtVWfS",
+        "refreshToken": ""
+    },
+    {
+        "username": "nicolas",
+        "roles": {
+            "User": 2001
+        },
+        "password": "$2b$10$besq1j9La6xr.bdO/hyH9.w4F7Y9hPWOI74cz5n0RcsjDk96dSQf."
+    }
+]

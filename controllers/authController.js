@@ -18,9 +18,17 @@ const verification = async (req, res) => {
     const match = await bcrypt.compare(pwd, foundUser.password)
 
     if (match) {
+        //obteniendo los roles del ususario almacenados 
+        let roles = Object.values(foundUser.roles)
         // creando el jsonwebtoken,firmando accestoken &&refreshtoken 
         const accessToken = JWT.sign(
-            { "username": foundUser.username },
+            {
+                "userInfo": {
+                    "username": foundUser.username,
+                    "roles": roles
+                }
+
+            },
             `${process.env.ACCESS_TOKEN_SECRET}`,
             { expiresIn: "60s" }
         )
@@ -54,7 +62,7 @@ const verification = async (req, res) => {
         res.sendStatus(401)
     }
 
-  
+
 
 
 }

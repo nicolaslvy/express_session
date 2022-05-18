@@ -1254,3 +1254,4 @@
 20220509	16:58:15	5d0a3438-b0b8-42e8-99a9-18aa3be707a3	GET	undefined	/auth
 20220509	16:58:41	f715ab98-b33e-4b4a-ab5c-d99966135d65	GET	undefined	/logout
 20220509	17:00:46	1eec5bb8-d83a-4dd0-ade5-b989c6d0190c	GET	undefined	/logout
+20220516	21:25:52	2a02abf2-7cee-490e-8157-55e49f240a86	GET	undefined	/register
