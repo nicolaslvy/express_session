@@ -4,9 +4,9 @@ require('dotenv').config()
 
 const veryfyJwt = (req,res,next) => {
 
-    const authHeader = req.headers['authorization'];
+    const authHeader = req.headers['authorization'] || req.headers['authorization'];
     
-    if(!authHeader) return res.sendStatus(401)
+    if(!authHeader?.startsWith('Bearer ')) return res.sendStatus(401)
 
     console.log(authHeader)
     const token = authHeader.split(' ')[1]
@@ -17,6 +17,7 @@ const veryfyJwt = (req,res,next) => {
         (err,decoded)=>{
             if (err) return res.sendStatus(403);
             req.user = decoded.username;
+            req.roles = decoded.roles
             next();
         } )
 
