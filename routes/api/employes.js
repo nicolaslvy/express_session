@@ -7,14 +7,23 @@
 const express = require('express')
 const router = express.Router()
 const empcontroller = require('../../controllers/empcontroller')
-const veryfyJWT = require('../../middleware/veryfyJwt')
+// const veryfyJWT = require('../../middleware/veryfyJwt')
+const verifyRoles = require('../../middleware/verifyRoles')
+const ROLES_LIST = require('../../roles/roles_list')
 
-router.route('/').get(veryfyJWT, empcontroller.getAllEmployees)
+
+
+
+
+
 
 
 router.route('/').get(
+    verifyRoles(ROLES_LIST.Admin),
+
     empcontroller.getAllEmployees
     ).post(
+
     empcontroller.createNewEmployee
 
 )

@@ -6,6 +6,7 @@ const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
 const cookieParser = require('cookie-parser')
 const PORT = process.env.PORT || 3500;
+const veryfyJWT = require('./middleware/veryfyJwt')
 
 // custom middleware logger
 app.use(logger);
@@ -44,15 +45,21 @@ app.use('/subdir', express.static(path.join(__dirname, '/public')));
 // routes
 app.use('/', require('./routes/root'))
 app.use('/subdir', require('./routes/subdir'));
-app.use('/employee', require('./routes/api/employes'));
-//register route
-app.use('/register', require('./routes/register'))
-//auth route
 app.use('/auth', require('./routes/auth'));
 //auth 
 app.use('/refresh', require('./routes/refresh'));
 //logout
 app.use('/logout',require('./routes/logout'))
+//register
+app.use('/register', require('./routes/register'))
+
+//using jwt
+app.use(veryfyJWT);
+
+//employees
+app.use('/employee', require('./routes/api/employes'));
+
+//register route
 
 
 app.all('*', (req, res) => {

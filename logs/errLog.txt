@@ -73,3 +73,6 @@
 20220507	21:02:31	d15f02ea-fbfb-4509-9d78-512facbc9549	ReferenceError: refreshTokenUSer is not defined
 20220507	21:03:12	4364bd33-fa41-4672-85a7-691b38ada74a	ReferenceError: refreshTokenUSer is not defined
 20220507	21:05:51	4b3507ab-7193-44da-99b7-1813bfd858f4	ReferenceError: FoundUser is not defined
+20220519	12:08:19	7d290bd3-6cd2-48ae-8327-6d4bf35298b7	TypeError: Cannot read property 'split' of undefined
+20220519	13:01:15	4a7d6fa0-155b-4bfc-b3fa-6e11a421676c	ReferenceError: role is not defined
+20220519	13:02:39	951c2184-2ad2-419d-a983-83e81ec9cae8	ReferenceError: rol is not defined
